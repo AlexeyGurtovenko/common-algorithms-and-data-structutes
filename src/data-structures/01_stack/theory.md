@@ -35,7 +35,7 @@ There are 2 ways to implement a Stack (what defines the data structure as a stac
 - using array
 - using linked list
 
-## Use cases of the Stack data structure
+## Common usecases of the Stack data structure
 
 - [balancing of symbols](https://www.geeksforgeeks.org/check-for-balanced-parentheses-in-an-expression/)
 - Redo-undo features in programms like editors, photoshop, browsers
