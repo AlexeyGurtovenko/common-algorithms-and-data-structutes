@@ -43,12 +43,4 @@ There are 2 ways to implement a Stack (what defines the data structure as a stac
 
 ## Usefull links
 
-[1](https://www.freecodecamp.org/news/10-common-data-structures-explained-with-videos-exercises-aaff6c06fb2b)
-
-[2](https://www.geeksforgeeks.org/stack-data-structure/#:~:text=Stack%20is%20a%20linear%20data,which%20the%20operations%20are%20performed.&text=The%20plate%20which%20is%20at,the%20longest%20period%20of%20time.)
-
-[3](https://www.geeksforgeeks.org/c-sharp-stack-with-examples/)
-
-[4](https://www.geeksforgeeks.org/stack-data-structure-introduction-program/)
-
-[5](https://en.wikipedia.org/wiki/Stack_%28abstract_data_type%29#Problem_Description)
+[1](https://www.freecodecamp.org/news/10-common-data-structures-explained-with-videos-exercises-aaff6c06fb2b) [2](https://www.geeksforgeeks.org/stack-data-structure/#:~:text=Stack%20is%20a%20linear%20data,which%20the%20operations%20are%20performed.&text=The%20plate%20which%20is%20at,the%20longest%20period%20of%20time.) [3](https://www.geeksforgeeks.org/c-sharp-stack-with-examples/) [4](https://www.geeksforgeeks.org/stack-data-structure-introduction-program/) [5](https://en.wikipedia.org/wiki/Stack_%28abstract_data_type%29#Problem_Description)
