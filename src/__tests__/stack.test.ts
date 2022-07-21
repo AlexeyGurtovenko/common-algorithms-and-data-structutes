@@ -1,4 +1,4 @@
-import { IStack, Stack, StackNullableException, StackOverflowException, StackUnderflowException, } from '../data-structures/01_stack/implementation';
+import { IStack, Stack, StackNullableException, StackOverflowException, StackUnderflowException } from "../data-structures";
 
 describe('Stack test cases', () => {
 
