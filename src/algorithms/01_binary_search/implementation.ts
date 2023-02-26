@@ -1,5 +1,11 @@
-
-export function binarySearch(items: number[], target: number): number | null {
+/**
+ * Performs binary search of an element in a provided array.
+ * 
+ * @param items array of items to search in
+ * @param target target value to search for
+ * @returns index of target element or `null` if element was not found
+ */
+export function binarySearch<T>(items: T[], target: T): number | null {
     let startIdx = 0;
     let endIdx = items.length - 1;
 
