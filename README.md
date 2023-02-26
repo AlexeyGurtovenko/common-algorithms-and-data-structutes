@@ -4,9 +4,20 @@ Code in the repository created in learning purposes and inspired by [Aditya Bhar
 
 The repository contains JavaScript implementation of common algorithms and data structures.
 
-Data structures: 
+Abstract data types (ADT): 
 
 * [Stack](https://github.com/AlexeyGurtovenko/common-algorithms-and-data-structutes/tree/main/src/data-structures/01_stack)
+* ...
+
+Data structures: 
+
+* [Singly linked list](https://github.com/AlexeyGurtovenko/common-algorithms-and-data-structutes/blob/main/src/data-structures/02_linked-list/singly-linked-list.ts)
+* ...
+
+Algorithms: 
+
+* [Binary search](https://github.com/AlexeyGurtovenko/common-algorithms-and-data-structutes/tree/main/src/algorithms/01_binary_search)
+* ...
 
 
 ## Installation
