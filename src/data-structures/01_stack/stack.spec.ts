@@ -1,8 +1,8 @@
-import { IStack, Stack, StackNullableException, StackOverflowException, StackUnderflowException } from "../data-structures";
+import { Stack, StackNullableException, StackOverflowException, StackUnderflowException } from "./implementation";
 
 describe('Stack test cases', () => {
 
-    let stack: IStack<number>;
+    let stack: Stack<number>;
 
     beforeEach(() => {
         stack = new Stack<number>();
@@ -94,5 +94,26 @@ describe('Stack test cases', () => {
 
         // Assert
         expect(stack.top()).toBe(testValues[testValuesLength]);
+    });
+
+    test('allows to use native javascript Iterator', () => {
+        // Arrange
+        const testValues = [1, 2, 3, 4, 5];
+        const stack1 = new Stack(testValues);         
+
+        // Act
+        // Assert
+        expect([...stack1]).toStrictEqual(testValues);
+    });
+
+    test('holds no more than allowed number of elements', () => {
+        // Arrange
+        const testValues = Array(20).fill('20');
+        const stack1 = new Stack(testValues, 15);         
+
+        // Act
+        // Assert
+        expect([...stack1].length).toEqual(15);
+        expect([...stack1]).toStrictEqual(Array(15).fill('20'));
     });
 });

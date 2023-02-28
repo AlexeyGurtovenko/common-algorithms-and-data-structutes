@@ -1,4 +1,4 @@
-import { SinglyLinkedList } from "../data-structures/02_linked-list";
+import { SinglyLinkedList } from "./implementation";
 
 describe('Singly-linked list test cases', () => {
 

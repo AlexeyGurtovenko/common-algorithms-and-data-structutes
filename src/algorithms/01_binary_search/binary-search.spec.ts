@@ -1,4 +1,4 @@
-import { binarySearch } from "../algorithms"
+import { binarySearch } from "./implementation";
 
 describe('Binary search test cases', () => {
 

@@ -12,7 +12,7 @@ export interface IStackException extends Error {
     toString: () => string;
 }
 
-export class Stack<T> implements IStack<T> {
+export class Stack<T> implements IStack<T>, Iterable<T> {
 
     private _data: T[] = [];
     private _maxSize: number;
@@ -21,8 +21,15 @@ export class Stack<T> implements IStack<T> {
         return this._data.length === 0;
     }
 
-    constructor(size = 13) {
+    constructor(items?: Iterable<T> | null, size = 13) {
         this._maxSize = size;
+
+        if (!items)
+            return;
+        
+        [...items]
+            .slice(0, this._maxSize)
+            .forEach(item => this.push(item));
     }
 
     push(value: T) {
@@ -48,6 +55,11 @@ export class Stack<T> implements IStack<T> {
 
     clear() {
         this._data = [];
+    }
+
+    // @ts-ignore
+    [Symbol.iterator]() {
+        return this._data.values();
     }
 }
 
