@@ -7,11 +7,12 @@ The repository contains JavaScript implementation of common algorithms and data 
 Abstract data types (ADT): 
 
 * [Stack](https://github.com/AlexeyGurtovenko/common-algorithms-and-data-structutes/tree/main/src/data-structures/01_stack)
+* [Queue](https://github.com/AlexeyGurtovenko/common-algorithms-and-data-structutes/tree/main/src/data-structures/03_queue)
 * ...
 
 Data structures: 
 
-* [Singly linked list](https://github.com/AlexeyGurtovenko/common-algorithms-and-data-structutes/blob/main/src/data-structures/02_linked-list/singly-linked-list.ts)
+* [Singly linked list](https://github.com/AlexeyGurtovenko/common-algorithms-and-data-structutes/tree/main/src/data-structures/02_singly-linked-list)
 * ...
 
 Algorithms: 
