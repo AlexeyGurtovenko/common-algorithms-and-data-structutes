@@ -1,4 +1,4 @@
-import { Queue, QueueFullException } from "./implementation";
+import { Queue, QueueEmptyException, QueueFullException } from "./implementation";
 
 describe('Queue test cases', () => {
     test('instantiates properly without any parameters', () => {
@@ -89,14 +89,13 @@ describe('Queue test cases', () => {
 
     test('throws an exception when dequeuing from an empty queue', () => {
         // Arrange
-        const testItems = [1, 2, 3, 4];
-        const queue = new Queue(testItems, testItems.length);
+        const queue = new Queue();
 
         // Act
-        const dequeueToFull = () => queue.enqueue(5);
+        const dequeueFromEmpty = () => queue.dequeue();
 
         // Assert
-        expect(dequeueToFull).toThrow(new QueueFullException())
+        expect(dequeueFromEmpty).toThrow(new QueueEmptyException())
     });
 
 });
