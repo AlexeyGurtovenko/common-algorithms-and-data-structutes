@@ -13,6 +13,7 @@ Abstract data types (ADT):
 Data structures: 
 
 * [Singly linked list](https://github.com/AlexeyGurtovenko/common-algorithms-and-data-structutes/tree/main/src/data-structures/02_singly-linked-list)
+* [Binary heap](https://github.com/AlexeyGurtovenko/common-algorithms-and-data-structutes/tree/main/src/data-structures/04_binary-heap)
 * ...
 
 Algorithms: 
