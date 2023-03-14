@@ -9,6 +9,7 @@ Abstract data types (ADT):
 * [Stack](https://github.com/AlexeyGurtovenko/common-algorithms-and-data-structutes/tree/main/src/data-structures/01_stack)
 * [Queue](https://github.com/AlexeyGurtovenko/common-algorithms-and-data-structutes/tree/main/src/data-structures/03_queue)
 * [Priority Queue](https://github.com/AlexeyGurtovenko/common-algorithms-and-data-structutes/tree/main/src/data-structures/05_priority-queue)
+* [Binary Search Tree](https://github.com/AlexeyGurtovenko/common-algorithms-and-data-structutes/tree/main/src/data-structures/06_binary-search-tree)
 * ...
 
 Data structures: 
