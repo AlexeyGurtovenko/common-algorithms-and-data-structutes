@@ -112,6 +112,18 @@ describe('Binary search tree test cases', () => {
         expect(BST1.contains(17)).toBeFalsy();
     });
 
+    test("allows to get its height", () => {
+        // Arrange
+        const testValues = [5, 4, 10, 2, 7, 21, -1, 3, 6, 7, 8, 18, 11];
+        const BST = new BinarySearchTree(testValues);
+        const BST1 = new BinarySearchTree();
+    
+        // Act
+        // Assert
+        expect(BST.height).toBe(4);
+        expect(BST1.height).toBe(-1);
+    });
+
     describe('remove test cases', () => {
         const BST = new BinarySearchTree<number>([5, 4, 10, 2, 7, 21, -1, 3]);
         

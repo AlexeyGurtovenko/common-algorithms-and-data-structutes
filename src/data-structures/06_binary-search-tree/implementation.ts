@@ -45,19 +45,19 @@ export class BinarySearchTree<T> implements IBinarySearchTree<T> {
 
     get height(): number {
         if (this.root) {
-            return this._getHeight(this.root);
+            return this.getHeight(this.root);
         }
 
         return -1;
     }
 
-    private _getHeight(node: ITreeNode<T> | null): number {
+    getHeight(node: ITreeNode<T> | null): number {
         if (node == null) {
             return -1;
         }
 
-        const leftSubtreeHeight = this._getHeight(node.left);
-        const rightSubtreeHeight = this._getHeight(node.right);
+        const leftSubtreeHeight = this.getHeight(node.left);
+        const rightSubtreeHeight = this.getHeight(node.right);
 
         return Math.max(leftSubtreeHeight, rightSubtreeHeight) + 1;
     }
