@@ -24,7 +24,7 @@ export const enum TraversalOrder {
 
 export interface IBinarySearchTree<T> {
     root: ITreeNode<T> | null;
-    // height: number;
+    height: number;
     
     insert: (value: T) => ITreeNode<T>;
     remove: (value: T) => ITreeNode<T> | null;
@@ -41,6 +41,25 @@ export class BinarySearchTree<T> implements IBinarySearchTree<T> {
             return;
 
         [...values].forEach(value => this.insert(value));
+    }
+
+    get height(): number {
+        if (this.root) {
+            return this._getHeight(this.root);
+        }
+
+        return -1;
+    }
+
+    private _getHeight(node: ITreeNode<T> | null): number {
+        if (node == null) {
+            return -1;
+        }
+
+        const leftSubtreeHeight = this._getHeight(node.left);
+        const rightSubtreeHeight = this._getHeight(node.right);
+
+        return Math.max(leftSubtreeHeight, rightSubtreeHeight) + 1;
     }
 
     /**
