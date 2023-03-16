@@ -99,6 +99,35 @@ describe('Singly-linked list test cases', () => {
         expect(list.contains('e')).toBeFalsy();
     });
 
+    test('allows to search for elements with a predicate function', () => {
+        // Arrange
+        const items = [
+            {
+                value: 'abc',
+            },
+            {
+                value: 'abcd',
+            },
+            {
+                value: 'abcde',
+            },
+            {
+                value: 'abcdef',
+            },
+            {
+                value: '',
+            },
+        ];
+
+        const list = new SinglyLinkedList(items);      
+        
+        // Act
+        // Assert
+        expect(list.find((data) => data.value === 'abc')).toBeTruthy();
+        expect(list.find((data) => data.value === '')).toBeTruthy();
+        expect(list.find((data) => data.value === 'dsdfds')).toBeFalsy();
+    });
+
     test('inserts an element at the start of a list, and returns the new length of the list', () => {
         // Arrange
         const items = ['a', 'b', 'c'];
