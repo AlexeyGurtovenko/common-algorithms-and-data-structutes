@@ -16,6 +16,7 @@ Data structures:
 * [Singly linked list](https://github.com/AlexeyGurtovenko/common-algorithms-and-data-structutes/tree/main/src/data-structures/02_singly-linked-list)
 * [Binary heap](https://github.com/AlexeyGurtovenko/common-algorithms-and-data-structutes/tree/main/src/data-structures/04_binary-heap)
 * [Binary Search Tree](https://github.com/AlexeyGurtovenko/common-algorithms-and-data-structutes/tree/main/src/data-structures/06_binary-search-tree)
+* [Hash Table](https://github.com/AlexeyGurtovenko/common-algorithms-and-data-structutes/tree/main/src/data-structures/07_hash-table)
 * ...
 
 Algorithms: 
