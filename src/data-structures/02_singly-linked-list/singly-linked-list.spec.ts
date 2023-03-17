@@ -128,6 +128,35 @@ describe('Singly-linked list test cases', () => {
         expect(list.find((data) => data.value === 'dsdfds')).toBeFalsy();
     });
 
+    test('allows to search for index of an element with a predicate function', () => {
+        // Arrange
+        const items = [
+            {
+                value: 'abc',
+            },
+            {
+                value: 'abcd',
+            },
+            {
+                value: 'abcde',
+            },
+            {
+                value: 'abcdef',
+            },
+            {
+                value: '',
+            },
+        ];
+
+        const list = new SinglyLinkedList(items);      
+        
+        // Act
+        // Assert
+        expect(list.findIndex((data) => data.value === 'abcde')).toBe(2);
+        expect(list.findIndex((data) => data.value === '4')).toBe(-1);
+        expect(list.findIndex((data) => data.value === 'dsdfds')).toBe(-1);
+    });
+    
     test('inserts an element at the start of a list, and returns the new length of the list', () => {
         // Arrange
         const items = ['a', 'b', 'c'];

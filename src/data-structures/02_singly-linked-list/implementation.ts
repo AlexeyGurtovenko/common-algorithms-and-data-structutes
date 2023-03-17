@@ -20,9 +20,10 @@ export interface ISinglyLinkedList<T> {
     
     clear: () => void;
 
-    indexOf: (data: T) => number;
+    indexOf: (searchElement: T) => number;
     contains: (data: T) => boolean;
-    find: (callback: (data: T) => boolean) => T | null;
+    find: (callback: (data: T) => boolean) => T | undefined;
+    findIndex: (callback: (data: T) => boolean) => number;
 
     add: (data: T, index: number) => number;
     addFirst: (data: T) => number;
@@ -44,7 +45,7 @@ export class SinglyLinkedList<T> implements ISinglyLinkedList<T>, Iterable<T> {
     constructor(items?: Iterable<T>) {
         if (!items) 
             return;
-        
+
         for (const item of items) {
             this.addLast(item);                        
         }
@@ -73,7 +74,7 @@ export class SinglyLinkedList<T> implements ISinglyLinkedList<T>, Iterable<T> {
             prevNode = currentNode;
             currentNode = currentNode?.next ?? null;
             prevNode!.next = null;
-        } while (currentNode != null);
+        } while (currentNode);
 
         this._head = null;
         this._tail = null;
@@ -100,7 +101,7 @@ export class SinglyLinkedList<T> implements ISinglyLinkedList<T>, Iterable<T> {
             currentNode = currentNode?.next ?? null;
             index++;
 
-        } while (currentNode != null);
+        } while (currentNode);
 
         return -1;
     };
@@ -117,10 +118,10 @@ export class SinglyLinkedList<T> implements ISinglyLinkedList<T>, Iterable<T> {
      * Returns the value of the first element in the list where callback returns `true`, and `undefined` otherwise.
      * @param callback find calls predicate once for each element of the array, in ascending order, until it finds one where predicate returns `true`. If such an element is found, find immediately returns that element value. Otherwise, find returns `undefined`.
      */
-    find(callback: (data: T) => boolean): T | null {
+    find(callback: (data: T) => boolean): T | undefined {
 
         if (this.isEmpty) {
-            return null;
+            return;
         }
 
         let currentNode = this._head;
@@ -137,7 +138,32 @@ export class SinglyLinkedList<T> implements ISinglyLinkedList<T>, Iterable<T> {
         } while (currentNode);
 
 
-        return null;
+        return;
+    }
+
+    /**
+     * Returns the index of the first element in the list where predicate is `true`, and -1 otherwise.
+     * @param callback find calls predicate once for each element of the list, in ascending order, until it finds one where predicate returns `true`. If such an element is found, findIndex immediately returns that element index. Otherwise, findIndex returns -1.
+     */
+    findIndex(callback: (data: T) => boolean): number {
+        if (this.isEmpty) {
+            return -1;
+        }
+
+        let index = 0;
+        let currentNode = this._head;
+
+        do {
+            if (callback(currentNode?.data as T)) {
+                return index;
+            }
+
+            currentNode = currentNode?.next ?? null;
+            index++;
+
+        } while (currentNode);
+
+        return -1;
     }
 
     /**
@@ -195,7 +221,7 @@ export class SinglyLinkedList<T> implements ISinglyLinkedList<T>, Iterable<T> {
         } else {
             let currentNode = this._head;
 
-            while (currentNode?.next != null) {
+            while (currentNode?.next) {
                 currentNode = currentNode.next;
             }
 
