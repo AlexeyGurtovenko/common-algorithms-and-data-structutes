@@ -22,6 +22,7 @@ Data structures:
 Algorithms: 
 
 * [Binary search](https://github.com/AlexeyGurtovenko/common-algorithms-and-data-structutes/tree/main/src/algorithms/01_binary_search)
+* [Selection sort](https://github.com/AlexeyGurtovenko/common-algorithms-and-data-structutes/tree/main/src/algorithms/02_selection-sort)
 * ...
 
 
